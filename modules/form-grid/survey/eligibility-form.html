@@ -1119,7 +1119,7 @@
                     </div>
                     <div class="formgroup">
                         <span class="question">
-                            <p>23. Which of the following sleep-related digital health interventions would you be interested in using?<br>Select all which apply:</p>
+                            <p>24. Which of the following sleep-related digital health interventions would you be interested in using?<br>Select all which apply:</p>
                         </span>
                         <div class="questiongroup">
                             <fieldset>
@@ -1170,16 +1170,13 @@
         function F__ID() {
             VmInclude: '__COMPONENT__/f/form.01.js'
             //---------------------------------------
-            var N = 11;
+            var N = 10;
             var current_I = 1;
             var registration_ready = false;
             //---------------------------------------
-            m.before_submit = function (data, index) {
-                data.ISI = scores.ISI;
-                data.ISI_1 = scores.ISI_1;
-                //-------------------------------------
-                return true;
-            }
+            //m.before_submit = function (data, index) {
+            //return true;
+            //}
             //---------------------------------------
             $('#D__ID').on('load', function () {
 
@@ -1320,7 +1317,7 @@
                     $('#dt_health_sleep_tx_rec__ID').removeAttr('required');
                 }
 
-                show_section(1);
+                show_section(10);
                 //console.log(JSON.stringify(m))
             });
             //---------------------------------------
@@ -1628,12 +1625,12 @@
                 if ($("#F__ID input[name=dt_health_sleep]:checked").val() == '1') {
                     $('#S7_21a__ID').show();
                     $('#S7_21c__ID').hide();
-                    $('#dt_health_sleep_rec__ID').removeAttr('required');
+                    $("#F__ID input[name=dt_health_sleep_rec]").removeAttr('required');
                 }
                 else {
                     $('#S7_21a__ID').hide();
                     $('#S7_21c__ID').show();
-                    $('#dt_health_sleep_rec__ID').prop('required', 'true');
+                    $("#F__ID input[name=dt_health_sleep_rec]").prop('required', 'true');
                 }
             })
             $("#F__ID input[name=improve_sleep_tx_9]").on('change', function () {
@@ -1743,11 +1740,18 @@
                     // registration_ready=true
                     $('#F__ID *').removeAttr('disabled');
                     old_submit(event);
+                    if (m.prefix == undefined) {
+                            $vm.load_module('thank-you', '', {});
+                        }
+                        else {
+                            $vm.load_module(m.prefix + 'thank-you', '', {})
+                        }
                 }
                 else show_section(current_I + 1);
             }
             //--------------------------------
             m.after_insert = function (data, index) {
+
                 /*console.log(JSON.stringify(index) + " - " + index.result.ops[0]._id)
                 if (registration_ready) {
                     if (m.prefix == undefined) { $vm.load_module('registration-form', '', { rec_id: index.result.ops[0]._id }); }

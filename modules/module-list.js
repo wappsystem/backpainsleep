@@ -7,11 +7,7 @@
     var api="wapp";
     //-------------------------------------------------------------------------------------
     m[p+"not_elig1"]         ={url:H+"/form-grid/survey/not_elig1.html"},
-    m[p+"not_eligphq9"]         ={url:H+"/form-grid/survey/not_eligphq9.html"},
-    m[p+"not_eligios"]         ={url:H+"/form-grid/survey/not_eligios.html"},
-    m[p+"not_eligiosb"]         ={url:H+"/form-grid/survey/not_eligiosb.html"},
-    m[p+"not_elig2"]         ={url:H+"/form-grid/survey/not_elig2.html"},
-    m[p+"not_elig3"]         ={url:H+"/form-grid/survey/not_elig3.html"},
+    m[p+"thank-you"]         ={url:H+"/form-grid/survey/thank-you.html"},
     m[p+"survey-data"]   ={url:H+"/form-grid/survey/eligibility-enrolled-data.html",Table:"backpainsleep-survey",router:1 };
     m[p+"survey-all-data"]   ={url:H+"/form-grid/survey/eligibility-data.html",Table:"backpainsleep-survey",router:1 };
     
