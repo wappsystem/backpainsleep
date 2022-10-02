@@ -44,7 +44,6 @@ padding:10px
   display:flex;
   display: grid;
   grid-template-columns: auto auto;
-
 }
 #D__ID .logo-l{
   text-align: -webkit-center;

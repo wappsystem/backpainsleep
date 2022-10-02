@@ -8,8 +8,10 @@
     //-------------------------------------------------------------------------------------
     m[p+"not_elig1"]         ={url:H+"/form-grid/survey/not_elig1.html"},
     m[p+"thank-you"]         ={url:H+"/form-grid/survey/thank-you.html"},
-    m[p+"survey-data"]   ={url:H+"/form-grid/survey/eligibility-enrolled-data.html",Table:"backpainsleep-survey",router:1 };
+    m[p+"survey-data"]       ={url:H+"/form-grid/survey/eligibility-data.html",Table:"backpainsleep-survey",router:1 };
     m[p+"survey-all-data"]   ={url:H+"/form-grid/survey/eligibility-data.html",Table:"backpainsleep-survey",router:1 };
+    m[p+"contact-data"]      ={url:H+"/form-grid/survey/contact-data.html",Table:"backpainsleep-contact",form_module:"contact-form",router:1,taskname:"Contact details" };
+    m[p+"contact-form"]      ={url:H+"/form-grid/survey/contact-form.html",Table:"backpainsleep-contact"};
     
 
 //    if(window.location.toString().indexOf('tb=demo')!=-1){

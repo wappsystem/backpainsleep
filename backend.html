@@ -41,6 +41,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Roboto+Slab' />
         <link href="assets/css/wapp-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/FlexSearch/0.6.22/flexsearch.min.js"></script>
@@ -67,9 +68,9 @@
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
             $vm.module_list={
-                header:         {url:$vm.hosting_path+"/modules/sites/survey/header.html"},
-                footer:         {url:$vm.hosting_path+"/modules/sites/survey/footer.html"},
-                survey:      {url:$vm.hosting_path+"/modules/form-grid/survey/eligibility-form.html",Table:"backpainsleep-survey", title:'Backpain Sleep - Survey', questionnaires:"$H/m/oq-panel.html"},
+                header:         {url:$vm.hosting_path+"/modules/sites/backend/header.html"},
+                footer:         {url:$vm.hosting_path+"/modules/sites/backend/footer.html"},
+                backend:      {url:$vm.hosting_path+"/modules/form-grid/survey/eligibility-data.html",Table:"backpainsleep-survey", title:'Backpain Sleep - Survey'},
                 
                 /*
                 auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
@@ -78,8 +79,8 @@
                 */
             }
             //---------------------------------------------
-            //$vm.first_module='home';
-            $vm.first_module='survey';
+            $vm.first_module='backend';
+            //$vm.first_module='survey';
             (function(){ var a=window.location.href.split('?/'); if(a.length==2) $vm.first_module=a[1].split('&')[0].replace(/\//g,'_'); }());
             $vm.ready=function(){
             }
@@ -274,7 +275,7 @@
                 left:0;
                 */
                 width:100%;
-                background:rgba(0,0,0,0.0);
+                background:rgba(0,0,0,1);
                 /*z-index:10;*/
             }
             @keyframes vm_module_fadein {

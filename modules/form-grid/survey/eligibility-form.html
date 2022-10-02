@@ -1159,7 +1159,7 @@
                     </div>
 
                     <div class="formgroup right">
-                        <button type="submit" d=1 class="submit_btn">Next</button>
+                        <button type="submit" d=1 class="submit_btn" style="width:150px;">Submit Survey</button>
                     </div>
 
                 </div>
@@ -1168,11 +1168,11 @@
     </div>
     <script>
         function F__ID() {
-            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__HOST__/assets/js/form.01.js'
             //---------------------------------------
             var N = 10;
             var current_I = 1;
-            var registration_ready = false;
+            var contact_ready = false;
             //---------------------------------------
             //m.before_submit = function (data, index) {
             //return true;
@@ -1737,35 +1737,18 @@
                     }
                 }
                 else if (current_I == N) {
-                    // registration_ready=true
+                    // contact_ready=true
                     $('#F__ID *').removeAttr('disabled');
                     old_submit(event);
-                    if (m.prefix == undefined) {
-                            $vm.load_module('thank-you', '', {});
-                        }
-                        else {
-                            $vm.load_module(m.prefix + 'thank-you', '', {})
-                        }
+                    if (m.prefix == undefined) { $vm.load_module('contact-form', '', {}); }
+                    else $vm.load_module(m.prefix + 'contact-form', '', {});
                 }
                 else show_section(current_I + 1);
-            }
-            //--------------------------------
-            m.after_insert = function (data, index) {
-
-                /*console.log(JSON.stringify(index) + " - " + index.result.ops[0]._id)
-                if (registration_ready) {
-                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', { rec_id: index.result.ops[0]._id }); }
-                    else $vm.load_module(m.prefix + 'registration-form', '', { screen_data: index.result.ops[0].Data, rec_id: index.result.ops[0]._id });
-                }*/
             }
             //--------------------------------
         }
     </script>
     <style>
-        #submit_box__ID {
-            text-align: right;
-        }
-
         /*VmInclude:__HOST__/assets/css/wapp-form.css*/
     </style>
 </div>
