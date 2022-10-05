@@ -83,7 +83,7 @@
                                 can best be integrated with physiotherapy practice, we would like to ask you some
                                 questions about your lower back pain, sleep, and experiences with digital health. Upon
                                 completion of the survey, you will be required to provide your contact details if you
-                                want to be entered in a prize draw for the opportunity to win 1-of-3 $200 eGift
+                                want to be entered in a prize draw for the opportunity to win 1-of-2 $200 eGift
                                 cards.</span>
                         </fieldset>
                     </div>
@@ -185,8 +185,14 @@
                                 <label class="rd_btn width_btn_250" for="employment_2__ID">Part-time</label><br>
                                 <input id="employment_3__ID" name="employment" type="radio" value="2">
                                 <label class="rd_btn width_btn_250" for="employment_3__ID">Casual</label><br>
-                                <input id="employment_4__ID" name="employment" type="radio" value="3">
-                                <label class="rd_btn width_btn_250" for="employment_4__ID">Other</label><br>
+                                <input id="employment_3__ID" name="employment" type="radio" value="3">
+                                <label class="rd_btn width_btn_250" for="employment_4__ID">Unemployed</label><br>
+                                <input id="employment_3__ID" name="employment" type="radio" value="4">
+                                <label class="rd_btn width_btn_250" for="employment_5__ID">Retired </label><br>
+                                <input id="employment_3__ID" name="employment" type="radio" value="4">
+                                <label class="rd_btn width_btn_250" for="employment_6__ID">Student </label><br>
+                                <input id="employment_4__ID" name="employment" type="radio" value="5">
+                                <label class="rd_btn width_btn_250" for="employment_7__ID">Other</label><br>
                                 <div>
                                     <label id="employment__ID" class="fullwidth hide"><span class="question">Please
                                             specify</span>
@@ -1138,8 +1144,8 @@
                                 <label class="rd_btn width_btn_full" for="dh_int_using_4__ID"><span
                                         class="ticked">&check;&nbsp;&nbsp;&nbsp;</span>Behavioural approaches for improving sleep
                                 </label><br>
-                                <input type="checkbox" id="dh_int_using_10__ID" name="dh_int_using_10">
-                                <label class="rd_btn width_btn_full" for="dh_int_using_10__ID"><span
+                                <input type="checkbox" id="dh_int_using_5__ID" name="dh_int_using_5">
+                                <label class="rd_btn width_btn_full" for="dh_int_using_5__ID"><span
                                         class="ticked">&check;&nbsp;&nbsp;&nbsp;</span>Other/s:
                                 </label><br>
                                 <div>
@@ -1149,8 +1155,8 @@
                                             class=formcontrol />
                                     </label>
                                 </div>
-                                <input type="checkbox" id="dh_int_using_11__ID" name="dh_int_using_11">
-                                <label class="rd_btn width_btn_full" for="dh_int_using_11__ID"><span
+                                <input type="checkbox" id="dh_int_using_6__ID" name="dh_int_using_6">
+                                <label class="rd_btn width_btn_full" for="dh_int_using_6__ID"><span
                                         class="ticked">&check;&nbsp;&nbsp;&nbsp;</span>None
                                 </label><br>
 
@@ -1276,7 +1282,7 @@
                     $('#hp_sleep_tx__ID').hide();
                     $('#hp_sleep_tx_other__ID').removeAttr('required');
                 }
-                if ($('#F__ID input[name=dh_int_using_10]:checked').val() == 'on') {
+                if ($('#F__ID input[name=dh_int_using_5]:checked').val() == 'on') {
                     $('#dh_int_using__ID').show();
                     $('#dh_int_using_other__ID').prop('required', 'true');
                 }
@@ -1505,24 +1511,24 @@
                     $("#F__ID input[name=hp_sleep_tx_1]").prop("disabled", false);
                 }
             });
-            $("#F__ID input[name=dh_int_using_11]").on('change', function () {
-                if ($("#F__ID input[name=dh_int_using_11]:checked").val() == 'on') {
+            $("#F__ID input[name=dh_int_using_6]").on('change', function () {
+                if ($("#F__ID input[name=dh_int_using_6]:checked").val() == 'on') {
                     $('#dh_int_using__ID').hide();
                     $('#dh_int_using_other__ID').removeAttr('required');
                     $('#dh_int_using_other__ID').val('');
-                    $("#F__ID input[name=dh_int_using_10]").prop("checked", false);
+                    $("#F__ID input[name=dh_int_using_5]").prop("checked", false);
                     $("#F__ID input[name=dh_int_using_4]").prop("checked", false);
                     $("#F__ID input[name=dh_int_using_3]").prop("checked", false);
                     $("#F__ID input[name=dh_int_using_2]").prop("checked", false);
                     $("#F__ID input[name=dh_int_using_1]").prop("checked", false);
-                    $("#F__ID input[name=dh_int_using_10]").prop("disabled", true);
+                    $("#F__ID input[name=dh_int_using_5]").prop("disabled", true);
                     $("#F__ID input[name=dh_int_using_4]").prop("disabled", true);
                     $("#F__ID input[name=dh_int_using_3]").prop("disabled", true);
                     $("#F__ID input[name=dh_int_using_2]").prop("disabled", true);
                     $("#F__ID input[name=dh_int_using_1]").prop("disabled", true);
                 }
                 else {
-                    $("#F__ID input[name=dh_int_using_10]").prop("disabled", false);
+                    $("#F__ID input[name=dh_int_using_5]").prop("disabled", false);
                     $("#F__ID input[name=dh_int_using_4]").prop("disabled", false);
                     $("#F__ID input[name=dh_int_using_3]").prop("disabled", false);
                     $("#F__ID input[name=dh_int_using_2]").prop("disabled", false);
@@ -1579,8 +1585,8 @@
                     $('#hp_sleep_tx_other__ID').removeAttr('required');
                 }
             })
-            $("#F__ID input[name=dh_int_using_10]").on('change', function () {
-                if ($('#F__ID input[name=dh_int_using_10]:checked').val() == 'on') {
+            $("#F__ID input[name=dh_int_using_5]").on('change', function () {
+                if ($('#F__ID input[name=dh_int_using_5]:checked').val() == 'on') {
                     $('#dh_int_using__ID').show();
                     $('#dh_int_using_other__ID').prop('required', 'true');
                 }
