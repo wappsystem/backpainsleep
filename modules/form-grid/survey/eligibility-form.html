@@ -185,13 +185,13 @@
                                 <label class="rd_btn width_btn_250" for="employment_2__ID">Part-time</label><br>
                                 <input id="employment_3__ID" name="employment" type="radio" value="2">
                                 <label class="rd_btn width_btn_250" for="employment_3__ID">Casual</label><br>
-                                <input id="employment_3__ID" name="employment" type="radio" value="3">
+                                <input id="employment_4__ID" name="employment" type="radio" value="3">
                                 <label class="rd_btn width_btn_250" for="employment_4__ID">Unemployed</label><br>
-                                <input id="employment_3__ID" name="employment" type="radio" value="4">
+                                <input id="employment_5__ID" name="employment" type="radio" value="4">
                                 <label class="rd_btn width_btn_250" for="employment_5__ID">Retired </label><br>
-                                <input id="employment_3__ID" name="employment" type="radio" value="4">
+                                <input id="employment_6__ID" name="employment" type="radio" value="4">
                                 <label class="rd_btn width_btn_250" for="employment_6__ID">Student </label><br>
-                                <input id="employment_4__ID" name="employment" type="radio" value="5">
+                                <input id="employment_7__ID" name="employment" type="radio" value="5">
                                 <label class="rd_btn width_btn_250" for="employment_7__ID">Other</label><br>
                                 <div>
                                     <label id="employment__ID" class="fullwidth hide"><span class="question">Please
@@ -252,7 +252,7 @@
                             <fieldset class="">
                                 <span class="question">7. On average, what time of day is your lower back pain most
                                     severe?</span>
-                                <input class="formcontrol" type="text" name="time_of_pain" placeholder="" required />
+                                <input class="formcontrol" type="number" min="0" max="23" name="time_of_pain" placeholder="24 hour clock. A number from 0 to 23" required />
                             </fieldset>
                         </div>
                     </div>
@@ -492,9 +492,10 @@
                             <span class="question">&nbsp;</span>
                             <fieldset class="">
                                 <div class="">
-                                    <span class="question">12. Do you experience any<u><i> sleep disturbance
+                                    <span class="question">
+                                             Do you experience any<u><i> sleep disturbance
                                             </i></u>associated with your back pain?<p>(sleep disturbance encompasses
-                                            sleep disorders of initiating and maintain sleep, excessive sleepiness,
+                                            sleep disorders of initiating and maintaining sleep, excessive sleepiness,
                                             sleep-wake scheduling or other dysfunctions associated with sleep and
                                             arousals)</p></span>
                                     <input id="sleep_dist_1__ID" name="sleep_dist" type="radio" value="1" required>
@@ -1326,7 +1327,7 @@
                     $('#dt_health_sleep_tx_rec__ID').removeAttr('required');
                 }
 
-                show_section(1);
+                show_section(10);
                 //console.log(JSON.stringify(m))
             });
             //---------------------------------------
