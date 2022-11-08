@@ -128,7 +128,7 @@ padding:10px
 
   #D__ID .grid-container-3-special {
     display: grid;
-    grid-template-columns: 120px 500px 120px;
+    grid-template-columns: 100px 520px 100px;
   }
   #D__ID .grid-container-2 {
     display: grid;
