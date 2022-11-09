@@ -204,7 +204,7 @@
                         </div>
                     </div>
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Next</button>
                     </div>
                 </div>
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Next</button>
                     </div>
                 </div>
@@ -482,7 +482,7 @@
                         </div>
                     </div>
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Next</button>
                     </div>
                 </div>
@@ -493,7 +493,7 @@
                             <fieldset class="">
                                 <div class="">
                                     <span class="question">
-                                             Do you experience any<u><i> sleep disturbance
+                                             12. Do you experience any<u><i> sleep disturbance
                                             </i></u>associated with your back pain?<p>(sleep disturbance encompasses
                                             sleep disorders of initiating and maintaining sleep, excessive sleepiness,
                                             sleep-wake scheduling or other dysfunctions associated with sleep and
@@ -695,7 +695,7 @@
                         </div>
                     </div>
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Next</button>
                     </div>
                 </div>
@@ -760,7 +760,7 @@
                     </div>
 
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Next</button>
                     </div>
                 </div>
@@ -908,7 +908,7 @@
                         </div>                
                     </div>
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Next</button>
                     </div>
 
@@ -1168,7 +1168,7 @@
                         </div>
                     </div>
                     <div class="formgroup submit_dual_btn" >
-                        <button type="submit" d=-1 class="submit_btn">Previous</button>
+                        <button type="button" d=-1 class="submit_btn">Previous</button>
                         <button type="submit" d=1 class="submit_btn">Submit Survey</button>
                     </div>
 
@@ -1688,6 +1688,7 @@
             $('#F__ID button').on('click', function (event) {
                 var d = $(this).attr("d");
                 d = parseInt(d);
+                console.log("d: "+d)
                 if (d < 0) show_section(current_I - 1);
                 else {
                     //do nothing, m.submit will handle  
@@ -1695,6 +1696,7 @@
             })
             //---------------------------------------
             var show_section = function (I) {
+                console.log("I: "+I)
                 for (var i = 1; i <= N; i++) {
                     $('#S' + i + "__ID").hide(); // remove/add '//' for Test mode/Production mode 
                     $('#S' + i + "__ID * ").attr('disabled', 'disabled');
@@ -1729,6 +1731,7 @@
             //---------------------------------------
             var old_submit = m.submit;
             m.submit = function (event) {
+                console.log("submit");
                 event.preventDefault();
                 if (current_I == 1) {
                     if ($("input[name='age18']:checked").val() == '0' ||
@@ -1753,7 +1756,7 @@
                     if (m.prefix == undefined) { $vm.load_module('contact-form', '', {}); }
                     else $vm.load_module(m.prefix + 'contact-form', '', {});
                 }
-                else show_section(current_I + 1);
+                else {console.log("end");show_section(current_I + 1);}
             }
             //--------------------------------
         }
