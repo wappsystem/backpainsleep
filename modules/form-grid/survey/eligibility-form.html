@@ -1799,7 +1799,7 @@
                 }
                 else if(notelig>1 && res.status!="captcha-error"){
                     if (m.prefix == undefined) { $vm.load_module('contact-form', '', {}); }
-                    else $vm.load_module(m.prefix + 'contact-form', '', {});
+                    else $vm.load_module(m.prefix + 'contact-form', '', {disturb_sleep:data.sleep_dist});
                 }
                 else{
                     captcha_func();
