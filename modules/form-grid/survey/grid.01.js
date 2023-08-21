@@ -248,7 +248,7 @@ m.export_records=function(){
     open_model__ID();
     $vm.request(req,function(N,i,txt){
         console.log(i+"/"+N);
-        $('#msg__ID').text((100*i/N).toFixed(0)+"%");
+        $('#msg__ID').text((100*i/(2*N)).toFixed(0)+"%");
         if(i==-1){
             var len=txt.length;
             var n_txt="["+txt.substring(5,len-9)+"]";
